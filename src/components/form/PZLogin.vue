@@ -18,15 +18,13 @@
       />
       <v-btn class="mr-4" @click="submit">submit</v-btn>
     </v-form>
-    <random :id="'345345345'" />
   </div>
 </template>
 
 <script>
-import Random from "./../PZRandom";
 export default {
   name: "PZLogin",
-  components: { Random },
+
   data() {
     return {
       user: {
@@ -38,7 +36,7 @@ export default {
   methods: {
     submit() {
       this.$store.state.user.push(this.user);
-      this.$router.push("/1");
+      this.$router.push("/main");
     }
   }
 };

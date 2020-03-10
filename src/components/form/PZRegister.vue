@@ -4,12 +4,7 @@
     <v-form class="form">
       <v-text-field label="First name" class="input" v-model="user.name" />
       <v-text-field label="Last name" class="input" v-model="user.lastName" />
-      <v-text-field
-        label="Age"
-        class="input"
-        type="number"
-        v-model="user.age"
-      />
+      <v-text-field label="Age" class="input" type="number" v-model="user.age" />
       <v-text-field
         label="Email"
         class="input"
@@ -35,13 +30,19 @@ export default {
   name: "PZREgister",
   data() {
     return {
-      user: { name: "", lastName: "", age: "", email: "", password: "" }
+      user: {
+        name: "",
+        lastName: "",
+        age: "",
+        email: "",
+        password: ""
+      }
     };
   },
   methods: {
     submit() {
       this.$store.state.user.push(this.user);
-      this.$router.push("/1");
+      this.$router.push("/main");
     }
   }
 };
